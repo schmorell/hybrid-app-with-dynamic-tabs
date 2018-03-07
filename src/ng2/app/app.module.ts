@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 
 import { AppComponent } from './app.component';
 import { PersonEditComponent } from './person-edit/person-edit.component';
@@ -23,10 +24,16 @@ import { HeavyStuffComponent } from './heavy-stuff/heavy-stuff.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UpgradeModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  // bootstrap: [AppComponent],
   entryComponents: [ TabComponent ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private upgrade: UpgradeModule) { }
+  ngDoBootstrap() {
+    this.upgrade.bootstrap(document.body, ['app'], { strictDi: true });
+  }
+}
