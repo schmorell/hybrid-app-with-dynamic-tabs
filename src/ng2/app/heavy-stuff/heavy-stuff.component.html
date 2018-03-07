@@ -1,3 +1,6 @@
-<div *ngFor="let item of testItems">
-  <input type="text" class="form-control" [placeholder]="item">
+<button class="btn btn-default" (click)="renderHeavy = !renderHeavy">Render Ng2?</button>
+<div *ngIf="renderHeavy">
+  <div *ngFor="let item of testItems">
+    <input type="text" class="form-control" [placeholder]="item">
+  </div>
 </div>

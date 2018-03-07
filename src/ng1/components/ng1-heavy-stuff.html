@@ -1,0 +1,6 @@
+<button class="btn btn-default" ng-click="vm.renderNg1Heavy = !vm.renderNg1Heavy">Render Ng1?</button>
+<div ng-if="vm.renderNg1Heavy">
+    <div ng-repeat="item in vm.testItems">
+        <input type="text" class="form-control" placeholder="{{item}}">
+    </div>
+</div>

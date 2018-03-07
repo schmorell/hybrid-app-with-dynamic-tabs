@@ -1,14 +1,34 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>G6Tab</title>
   <base href="/">
 
+  <!-- ng1 -->
+  <script src="ng1/manual_modules/angular.js"></script>
+  <script src="ng1/app.js"></script>
+  <script src="ng1/components/ng1-heavy-stuff.component.js"></script>
+  <!-- /ng1 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+
+<body ng-app="app">
+
   <app-root></app-root>
+
+  <!-- ng1 -->
+  <hr />
+  <h3>~~~ ng1 ~~~</h3>
+  <div>
+    <ng1-heavy-stuff></ng1-heavy-stuff>
+  </div>
+  <h3>~~~ ending ng1 ~~~</h3>
+  <!-- /ng1 -->
+
 </body>
+
 </html>

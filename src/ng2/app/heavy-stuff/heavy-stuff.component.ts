@@ -9,6 +9,7 @@ export class HeavyStuffComponent implements OnInit {
 
   testArray: Array<string> = [];
   testItems: Array<number> = [];
+  renderHeavy: boolean = false;
 
   constructor() { }
 
