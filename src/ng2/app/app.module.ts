@@ -28,12 +28,12 @@ import { HeavyStuffComponent } from './heavy-stuff/heavy-stuff.component';
     UpgradeModule
   ],
   providers: [],
-  // bootstrap: [AppComponent],
+  bootstrap: [AppComponent],
   entryComponents: [ TabComponent ]
 })
 export class AppModule {
-  constructor(private upgrade: UpgradeModule) { }
-  ngDoBootstrap() {
-    this.upgrade.bootstrap(document.body, ['app'], { strictDi: true });
-  }
+  // constructor(private upgrade: UpgradeModule) { }
+  // ngDoBootstrap() {
+  //   this.upgrade.bootstrap(document.body, ['app'], { strictDi: true });
+  // }
 }

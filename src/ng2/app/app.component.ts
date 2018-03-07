@@ -1,4 +1,5 @@
 import {Component, ViewChild } from '@angular/core';
+import { UpgradeModule } from "@angular/upgrade/static";
 
 import {TabsComponent} from './tabs/tabs.component';
 
@@ -20,6 +21,12 @@ export class AppComponent {
       twitter: '@juristr'
     }
   ];
+
+  constructor(private upgrade: UpgradeModule) { }
+
+  ngOnInit() {
+    this.upgrade.bootstrap(document.body, ['app']);
+  }  
   
   onEditPerson(person) {
     this.tabsComponent.openTab(
