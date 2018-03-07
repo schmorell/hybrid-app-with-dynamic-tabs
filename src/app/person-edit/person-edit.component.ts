@@ -8,8 +8,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class PersonEditComponent implements OnInit {
   personForm: FormGroup;
-  testArray: Array<string> = [];
-  testItems: Array<number> = [];
   
   @Input() person;
   @Output() savePerson = new EventEmitter<any>();
@@ -21,12 +19,6 @@ export class PersonEditComponent implements OnInit {
       surname: '',
       twitter: ''
     });
-
-    for (var i = 0; i < 10000; i++) {
-      this.testItems.push(i);
-    }
-    
-    this.testArray.push(new Array(1000000).join('x'));    
   }
   
   ngOnInit() {

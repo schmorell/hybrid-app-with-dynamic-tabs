@@ -8,6 +8,7 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { DynamicTabsDirective } from './dynamic-tabs.directive';
+import { HeavyStuffComponent } from './heavy-stuff/heavy-stuff.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DynamicTabsDirective } from './dynamic-tabs.directive';
     PeopleListComponent,
     TabComponent,
     TabsComponent,
-    DynamicTabsDirective
+    DynamicTabsDirective,
+    HeavyStuffComponent
   ],
   imports: [
     BrowserModule,
