@@ -8,6 +8,11 @@
     </people-list>
     <hr />
     <button class="btn btn-default" (click)="onOpenAbout()"><i class="glyphicon glyphicon-question-sign"></i> About this</button>
+    <hr />
+    <button class="btn btn-default" (click)="renderHeavy = !renderHeavy">Render?</button>
+    <div *ngIf="renderHeavy">
+      <heavy-stuff></heavy-stuff>
+    </div>
   </my-tab>
 </my-tabs>
 
